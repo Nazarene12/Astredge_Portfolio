@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Linkedin, Instagram } from "lucide-react";
+import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -37,7 +38,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="AstrEdge Logo"
                 className="h-10 w-10 object-contain"
               />

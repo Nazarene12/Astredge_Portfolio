@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/images/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
             <img
-              src="/logo.png"
+              src={logo}
               alt="AstrEdge Logo"
               className="h-20 w-20 object-contain"
             />
