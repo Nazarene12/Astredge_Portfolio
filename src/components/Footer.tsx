@@ -26,8 +26,12 @@ const Footer = () => {
     }
   }, []);
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/astredgeofficial/",
+      label: "Instagram",
+    },
+    // { icon: Linkedin, href: "", label: "LinkedIn" },
   ];
 
   return (
@@ -46,11 +50,10 @@ const Footer = () => {
             </div>
             {/* Contact Info in Footer */}
             <div className="mt-6 flex flex-col gap-2 text-gray-400 text-sm">
-              <div>Email: hello@astredge.com</div>
-              <div>Phone: +1 (555) 123-4567</div>
-              <div>Location: Global Remote Team</div>
+              <div>Email: astredge@gmail.com</div>
+              <div>Phone: +91 8015758002</div>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-3">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
