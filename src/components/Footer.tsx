@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Linkedin, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import logo from "../assets/images/logo.png";
 
 const Footer = () => {

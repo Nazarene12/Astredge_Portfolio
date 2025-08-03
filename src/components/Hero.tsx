@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const spanRef = useRef(null);
