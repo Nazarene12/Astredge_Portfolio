@@ -65,17 +65,26 @@ const Contact = () => {
         "https://script.google.com/macros/s/AKfycbyQavLpHxqqnFejJ1gmwuuU6WbyLQ99bf8SNdHGRNUtXYZXKnLFEkP-JA5RHNuejE2JsA/exec",
         {
           method: "POST",
-          mode: "no-cors",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(payload),
+          body: new URLSearchParams(payload).toString(),
         }
-      );
-
-      setToastMessage("Message sent successfully!");
-      setToastType("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      )
+        .then((res) => res.text())
+        .then((data) => {
+          const parsedData = JSON.parse(data);
+          if (parsedData.result === "success") {
+            // handle success if needed
+            setToastMessage("Message sent successfully!");
+            setToastType("success");
+            setFormData({ name: "", email: "", subject: "", message: "" });
+          } else {
+            setToastMessage(parsedData.message);
+            setToastType("error");
+            console.log(parsedData, parsedData.message);
+          }
+        });
     } catch (error) {
       console.error("Submit error:", error);
       setToastMessage("Network error. Please try again.");
