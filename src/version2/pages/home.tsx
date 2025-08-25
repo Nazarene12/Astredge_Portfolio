@@ -51,7 +51,7 @@ const Home = () => {
           </button>
 
           <a
-            href="https://wa.me/7604946139" // replace with your WhatsApp number, exclude any + or 00
+            href="https://wa.me/8015758002" // replace with your WhatsApp number, exclude any + or 00
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primaryBackground text-textSecondary px-5 py-2 rounded font-medium hover:bg-primaryBackground transition"

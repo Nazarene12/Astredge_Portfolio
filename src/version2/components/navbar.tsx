@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import LogoImg from "../../assets/images/logo.png"; // Your logo path
-
+import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   const handleBookCallClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setDrawerOpen(false);
-    if (location.pathname !== "/contact") {
+    if (location.pathname !== "/") {
       navigate("/contact");
     } else {
       const contactSection = document.getElementById("contact-section");
@@ -60,30 +60,31 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex flex-row space-x-4  items-center">
           {/* Navigation Links */}
           <div className="flex items-center space-x-8">
-            <a
-              href="/services"
+            <Link
               className="text-textSecondary hover:text-textHighlight transition"
+              to="/services"
             >
               Services
-            </a>
-            <a
-              href="/casestudy"
+            </Link>
+            <Link
               className="text-textSecondary hover:text-textHighlight transition"
+              to="/casestudy"
             >
               Case Studies
-            </a>
-            <a
-              href="/blog"
+            </Link>
+            <Link
               className="text-textSecondary hover:text-textHighlight transition"
+              to="/blog"
             >
               Blog
-            </a>
-            <a
-              href="/pricing"
+            </Link>
+            <Link
               className="text-textSecondary hover:text-textHighlight transition"
+              to="/pricing"
             >
               Pricing
-            </a>
+            </Link>
+
             <a
               href="#faq-section"
               onClick={handleFaqClick}
@@ -91,12 +92,12 @@ const Navbar: React.FC = () => {
             >
               FAQs
             </a>
-            <a
-              href="/about"
+            <Link
               className="text-textSecondary hover:text-textHighlight transition"
+              to="/about"
             >
               About us
-            </a>
+            </Link>
           </div>
 
           {/* Call to Action Buttons */}
@@ -109,7 +110,7 @@ const Navbar: React.FC = () => {
               Book a 15-min Call
             </a>
             <a
-              href="https://wa.me/7604946139"
+              href="https://wa.me/8015758002"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-teritaryBackground text-textSecondary px-5 py-2 rounded font-medium hover:bg-teritaryBackground transition"
@@ -182,34 +183,35 @@ const Navbar: React.FC = () => {
             </svg>
           </div>
 
-          <a
-            href="/services"
+          <Link
+            to="/services"
             onClick={() => setDrawerOpen(false)}
             className="text-textSecondary hover:text-textHighlight transition"
           >
             Services
-          </a>
-          <a
-            href="/casestudy"
+          </Link>
+
+          <Link
+            to="/casestudy"
             onClick={() => setDrawerOpen(false)}
             className="text-textSecondary hover:text-textHighlight transition"
           >
             Case Studies
-          </a>
-          <a
-            href="/blog"
+          </Link>
+          <Link
+            to="/blog"
             onClick={() => setDrawerOpen(false)}
             className="text-textSecondary hover:text-textHighlight transition"
           >
             Blog
-          </a>
-          <a
-            href="/pricing"
+          </Link>
+          <Link
+            to="/pricing"
             onClick={() => setDrawerOpen(false)}
             className="text-textSecondary hover:text-textHighlight transition"
           >
             Pricing
-          </a>
+          </Link>
           <a
             href="#faq-section"
             onClick={(e) => {
@@ -220,16 +222,16 @@ const Navbar: React.FC = () => {
           >
             FAQs
           </a>
-          <a
-            href="/about"
+          <Link
+            to="/about"
             onClick={() => setDrawerOpen(false)}
             className="text-textSecondary hover:text-textHighlight transition"
           >
             About us
-          </a>
+          </Link>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             onClick={(e) => {
               handleBookCallClick(e);
               setDrawerOpen(false);
@@ -237,7 +239,7 @@ const Navbar: React.FC = () => {
             className="px-5 py-2 bg-highlightBackground text-textPrimary rounded-md font-medium hover:bg-highlightBackground transition cursor-pointer text-center"
           >
             Book a 15-min Call
-          </a>
+          </Link>
           <a
             href="https://wa.me/8015758002"
             target="_blank"
