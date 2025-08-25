@@ -12,7 +12,7 @@ import BlogDetail from "./version2/pages/blogdetaill";
 
 function App() {
   return (
-    <Router basename="/Astredge_Portfolio">
+    <Router>
       <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
