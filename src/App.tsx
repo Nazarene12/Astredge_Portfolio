@@ -1,4 +1,9 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router1,
+  // BrowserRouter as Router2,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import Navbar from "./version2/components/navbar";
 import Home from "./version2/pages/home";
@@ -12,7 +17,7 @@ import BlogDetail from "./version2/pages/blogdetaill";
 
 function App() {
   return (
-    <Router>
+    <Router1>
       <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
@@ -27,7 +32,7 @@ function App() {
           {/* Add more routes as needed */}
         </Routes>
       </div>
-    </Router>
+    </Router1>
   );
 }
 
